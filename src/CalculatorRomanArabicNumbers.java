@@ -22,8 +22,8 @@ public class CalculatorRomanArabicNumbers {
         int right1;
         int result = 0;
         if(right && left){
-            left1=rimeToArabian(all[0]);
-            right1=rimeToArabian(all[2]);
+            left1=romanToArabic(all[0]);
+            right1=romanToArabic(all[2]);
             switch (math) {
                 case "+" -> result = left1 + right1;
                 case "-" -> result = left1 - right1;
@@ -62,7 +62,7 @@ public class CalculatorRomanArabicNumbers {
         else
             return false;
     }
-    static int rimeToArabian(String s){
+    static int romanToArabic(String s){
         int r= switch (s){
             case "I"->1;
             case "II"->2;
